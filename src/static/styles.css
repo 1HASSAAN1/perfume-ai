@@ -1,0 +1,18 @@
+:root { --bg:#0f0f10; --panel:#1a1b1e; --text:#e9e9ee; --muted:#a7a7b0; --accent:#6b7bff; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, Arial, sans-serif; background:var(--bg); color:var(--text); }
+.container { max-width: 960px; margin: 56px auto; padding: 0 16px; }
+h1 { font-size: 28px; margin: 0 0 16px; }
+.badge { display:inline-block; background:var(--accent); color:white; padding:4px 8px; border-radius:10px; margin-right:8px; font-size:14px; }
+.controls { display:flex; gap:10px; background:var(--panel); padding:12px; border-radius:12px; align-items:center; }
+.controls input[type="text"] { flex:1; min-width: 220px; }
+input, select, button { padding:10px 12px; border:1px solid #2a2b30; background:#121316; color:var(--text); border-radius:8px; }
+.chk { display:flex; align-items:center; gap:8px; color:var(--text); }
+.btn { background: var(--accent); border: none; cursor: pointer; }
+.hint { color: var(--muted); margin: 12px 4px 0; font-size: 14px; }
+#results { margin-top: 22px; }
+h2 { text-align:center; margin: 18px 0 10px; }
+.card { background: #17181b; border-radius: 10px; padding: 14px; margin: 10px auto; max-width: 760px; }
+.card .name { font-size: 18px; }
+.card .brand { color: var(--muted); font-weight: normal; }
+.card .meta { display:flex; gap:18px; justify-content:center; color: var(--muted); margin-top:6px; }

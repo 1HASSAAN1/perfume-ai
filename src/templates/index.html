@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Perfume AI — Dupe Finder</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <main class="container">
+    <h1><span class="badge">Perfume AI</span> Find cheaper dupes and similar scents</h1>
+
+    <!-- Search bar + filters -->
+    <form id="search-form" class="controls">
+      <input id="search-input" type="text" placeholder="Dior Sauvage" />
+      <input id="price-cap" type="number" step="1" min="0" placeholder="Max £" />
+      <select id="top-k">
+        <option value="3">Top 3</option>
+        <option value="5" selected>Top 5</option>
+        <option value="6">Top 6</option>
+        <option value="10">Top 10</option>
+      </select>
+      <label class="chk">
+        <input id="cheaper-only" type="checkbox" checked />
+        Cheaper only
+      </label>
+      <button type="submit" class="btn">Search</button>
+    </form>
+
+    <p class="hint">Tip: try <strong>Dior Sauvage</strong>, <strong>Bleu de Chanel</strong>, <strong>Ombre Nomade</strong>.</p>
+
+    <div id="results"></div>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
